@@ -12,7 +12,7 @@ def plot_graph(clean_data, noise_data, mix_data, clean_sr, noise_sr, mix_sr):
     plt.ylabel("Amplitude")
     plt.title("original wavedata")
     plt.grid('on')
-
+    plt.savefig('images/original')
     # plot noise wave
     size = noise_data.shape[0]
     time = np.arange(0, size) * (1.0 / noise_sr)
@@ -22,7 +22,7 @@ def plot_graph(clean_data, noise_data, mix_data, clean_sr, noise_sr, mix_sr):
     plt.ylabel("Amplitude")
     plt.title("noise wavedata")
     plt.grid('on')
-
+    plt.savefig('images/noise')
 
     # plot mix wave
 
@@ -34,5 +34,6 @@ def plot_graph(clean_data, noise_data, mix_data, clean_sr, noise_sr, mix_sr):
     plt.ylabel("Amplitude")
     plt.title("mixed wavedata")
     plt.grid('on')
+    plt.savefig('images/mix')
     plt.show()
 
