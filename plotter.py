@@ -3,6 +3,7 @@ import numpy as np
 
 
 def plot_graph(clean_data, noise_data, mix_data, clean_sr, noise_sr, mix_sr):
+    # plot orignial wave
     size = clean_data.shape[0]
     time = np.arange(0, size) * (1.0 / clean_sr)
     plt.figure(1)
@@ -22,8 +23,9 @@ def plot_graph(clean_data, noise_data, mix_data, clean_sr, noise_sr, mix_sr):
     plt.title("noise wavedata")
     plt.grid('on')
 
+
     # plot mix wave
-    # plot orignial wave
+
     size = mix_data.shape[0]
     time = np.arange(0, size) * (1.0 / mix_sr)
     plt.figure(3)
@@ -33,3 +35,4 @@ def plot_graph(clean_data, noise_data, mix_data, clean_sr, noise_sr, mix_sr):
     plt.title("mixed wavedata")
     plt.grid('on')
     plt.show()
+
